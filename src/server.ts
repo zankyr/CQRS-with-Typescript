@@ -1,6 +1,7 @@
 import * as express from "express";
 import itemsRouter from "./routes/items";
 const morgan = require("morgan");
+import { createConnection } from "typeorm";
 
 const app = express();
 
@@ -12,8 +13,12 @@ app.get("/", (req, res) => {
 
 app.use("/items", itemsRouter);
 
-const PORT = process.env.PORT || 3001;
+createConnection()
+  .then((connection) => {
+    const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
-  console.log(`Server is running in http://localhost:${PORT}`);
-});
+    app.listen(PORT, () => {
+      console.log(`Server is running in http://localhost:${PORT}`);
+    });
+  })
+  .catch((error) => console.error(error));
