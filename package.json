@@ -1,0 +1,27 @@
+{
+  "name": "cqrs-with-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --inspect=5858 -r ts-node/register ./src/application/server.ts",
+    "start:watch": "nodemon",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zankyr/CQRS-with-Typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zankyr/CQRS-with-Typescript/issues"
+  },
+  "homepage": "https://github.com/zankyr/CQRS-with-Typescript#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
