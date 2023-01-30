@@ -1,6 +1,6 @@
 import * as AppItemCommands from "../commands/application/items";
 import * as AppItemQueries from "../queries/items";
-import { Items } from "../entity/Items";
+import { Item } from "../entity/Item";
 
 // Configure express.js so it can read and parse JSON bodies
 var express = require("express");
@@ -34,7 +34,7 @@ itemsRouter.get("/", (req, res, next) => {
 
 // Create new item
 itemsRouter.post("/create", jsonParser, (req, res, next) => {
-  const item: Items = req.body;
+  const item: Item = req.body;
 
   const commandName = "POSTItemCommand";
 

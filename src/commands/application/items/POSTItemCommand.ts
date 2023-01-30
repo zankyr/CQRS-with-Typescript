@@ -1,10 +1,10 @@
-import { Items } from "../../../entity/Items";
+import { Item } from "../../../entity/Item";
 import * as DomainItemCommands from "../../domain/items";
 
 export class POSTItemCommand<ICommand> {
-  private item: Items;
+  private item: Item;
 
-  constructor(item: Items) {
+  constructor(item: Item) {
     this.item = item;
   }
 

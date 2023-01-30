@@ -1,13 +1,13 @@
 import * as express from "express";
 import itemsRouter from "./routes/items";
-const morgan = require("morgan");
 import { createConnection } from "typeorm";
+const morgan = require("morgan");
 
 const app = express();
 
 app.use(morgan("tiny"));
 
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
   res.send("Hello, CQRS World!");
 });
 

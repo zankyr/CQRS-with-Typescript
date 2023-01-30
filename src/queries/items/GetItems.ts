@@ -3,7 +3,7 @@ import { getManager } from "typeorm";
 export class GetItems<IQuery> {
   public execute = () => {
     const items = getManager()
-      .getRepository("Items")
+      .getRepository("Item")
       .find()
       .then((items) => {
         console.log(`Item found: ${items.length}`);
