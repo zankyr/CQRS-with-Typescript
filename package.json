@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --inspect=5858 -r ts-node/register ./src/application/server.ts",
+    "start": "node --inspect=5858 -r ts-node/register ./src/server.ts",
     "start:watch": "nodemon",
     "build": "tsc"
   },
@@ -23,5 +23,10 @@
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@types/node": "^18.11.18",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   }
 }
