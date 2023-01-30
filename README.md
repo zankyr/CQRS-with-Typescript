@@ -1,5 +1,5 @@
 # CQRS-with-Typescript
 
-## Source
+An example implementing CQRS from scratch
 
-https://medium.com/swlh/cqrs-from-scratch-with-typescript-e2ccf7fc2b64
+This project has been implemented starting from https://medium.com/swlh/cqrs-from-scratch-with-typescript-e2ccf7fc2b64 and adding the query part.
